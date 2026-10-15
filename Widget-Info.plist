@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SkyNearAppGroup</key>
+	<string>group.de.leola.skynear</string>
+	<key>CFBundleDisplayName</key>
+	<string>SkyNear Widgets</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>7</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.widgetkit-extension</string>
+	</dict>
+	<key>NSWidgetWantsLocation</key>
+	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Zeigt die nächsten erfassten Flugzeuge um deinen Standort. Gerundete Koordinaten werden an ADSB.lol oder bei Ausfall an adsb.fi gesendet. Für den Kartenhintergrund werden Karten von Apple geladen.</string>
+</dict>
+</plist>

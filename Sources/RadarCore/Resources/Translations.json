@@ -1,0 +1,476 @@
+{
+  "In deiner Nähe": {
+    "en": "Nearby",
+    "da": "I nærheden"
+  },
+  "Standort erlauben": {
+    "en": "Allow location",
+    "da": "Tillad lokalitet"
+  },
+  "Standort freigeben": {
+    "en": "Enable location",
+    "da": "Aktivér lokalitet"
+  },
+  "Keine erfassten Flugzeuge im geladenen Umkreis.": {
+    "en": "No tracked aircraft in the loaded area.",
+    "da": "Ingen registrerede fly i det indlæste område."
+  },
+  "Flugzeuge werden geladen …": {
+    "en": "Loading aircraft …",
+    "da": "Indlæser fly …"
+  },
+  "Die fünf nächsten erfassten Flugzeuge": {
+    "en": "The five nearest tracked aircraft",
+    "da": "De fem nærmeste registrerede fly"
+  },
+  "Sperrbildschirm": {
+    "en": "Lock Screen",
+    "da": "Låseskærm"
+  },
+  "Live Activity beenden": {
+    "en": "End Live Activity",
+    "da": "Afslut Live Activity"
+  },
+  "Live Activity starten": {
+    "en": "Start Live Activity",
+    "da": "Start Live Activity"
+  },
+  "Live-Updates erfolgen durch die laufende App. Im Hintergrund sind keine dauerhaften Updates zugesagt.": {
+    "en": "The running app supplies live updates. Continuous background updates are not guaranteed.",
+    "da": "Den aktive app leverer liveopdateringer. Løbende opdateringer i baggrunden er ikke garanteret."
+  },
+  "Homescreen-Widget": {
+    "en": "Home Screen widgets",
+    "da": "Widgets på hjemmeskærmen"
+  },
+  "Widget-Anleitung": {
+    "en": "Hold the Home Screen > Edit > Add Widget > SkyNear. Choose the large five-aircraft widget, large nearest-aircraft widget, or medium glass widget. Allow widget location access.",
+    "da": "Hold på hjemmeskærmen > Rediger > Tilføj widget > SkyNear. Vælg fem fly, nærmeste fly eller den mellemstore glaswidget. Tillad widgetplacering."
+  },
+  "iOS bestimmt den Aktualisierungszeitpunkt. Prüfe immer den angezeigten Datenstand.": {
+    "en": "iOS controls update timing. Always check the displayed data time.",
+    "da": "iOS bestemmer opdateringstidspunktet. Kontrollér altid det viste datatidspunkt."
+  },
+  "Foto nicht verfügbar": {
+    "en": "Photo unavailable",
+    "da": "Foto ikke tilgængeligt"
+  },
+  "Kein Foto": {
+    "en": "No photo",
+    "da": "Intet foto"
+  },
+  "Foto: airport-data via adsbdb. Urheberrechte beim jeweiligen Fotografen.": {
+    "en": "Photo: airport-data via adsbdb. Copyright belongs to the photographer.",
+    "da": "Foto: airport-data via adsbdb. Ophavsretten tilhører fotografen."
+  },
+  "Bildquelle öffnen": {
+    "en": "Open image source",
+    "da": "Åbn billedkilde"
+  },
+  "Flugdaten": {
+    "en": "Flight data",
+    "da": "Flydata"
+  },
+  "Kennzeichen": {
+    "en": "Registration",
+    "da": "Registrering"
+  },
+  "Modellcode": {
+    "en": "Type code",
+    "da": "Typekode"
+  },
+  "Eingetragener Eigentümer": {
+    "en": "Registered owner",
+    "da": "Registreret ejer"
+  },
+  "Höhe": {
+    "en": "Altitude",
+    "da": "Højde"
+  },
+  "Geschwindigkeit über Grund": {
+    "en": "Ground speed",
+    "da": "Fart over jorden"
+  },
+  "Entfernung zu dir": {
+    "en": "Distance from you",
+    "da": "Afstand fra dig"
+  },
+  "Kurs": {
+    "en": "Track",
+    "da": "Kurs"
+  },
+  "Positionsalter beim Abruf": {
+    "en": "Position age when fetched",
+    "da": "Positionens alder ved hentning"
+  },
+  "Bekannte Rufzeichenroute": {
+    "en": "Known callsign route",
+    "da": "Kendt rute for kaldesignal"
+  },
+  "Herkunft": {
+    "en": "Origin",
+    "da": "Afgang"
+  },
+  "Ziel": {
+    "en": "Destination",
+    "da": "Destination"
+  },
+  "Route aus einer Referenzdatenbank, nicht als aktueller Flugplan verifiziert. Umleitungen und Zwischenstopps können fehlen.": {
+    "en": "Route from a reference database, not verified as the current flight plan. Diversions and stops may be missing.",
+    "da": "Rute fra en referencedatabase, ikke bekræftet som den aktuelle flyveplan. Omdirigeringer og stop kan mangle."
+  },
+  "Start": {
+    "en": "Origin",
+    "da": "Afgang"
+  },
+  "Linie verbindet die Flughäfen, sie ist keine tatsächlich geflogene Spur.": {
+    "en": "The line connects airports; it is not the actual flight track.",
+    "da": "Linjen forbinder lufthavnene; den viser ikke den faktisk fløjne rute."
+  },
+  "Keine Referenzdaten verfügbar oder Referenzdienst nicht erreichbar. Positionsdaten bleiben verwendbar.": {
+    "en": "Reference data unavailable or service unreachable. Position data remains usable.",
+    "da": "Referencedata er ikke tilgængelige, eller tjenesten kan ikke nås. Positionsdata kan stadig bruges."
+  },
+  "Höhe ist nicht Höhe über dem Boden.": {
+    "en": "Altitude is not height above the ground.",
+    "da": "Højde er ikke højde over terrænet."
+  },
+  "Flugzeug": {
+    "en": "Aircraft",
+    "da": "Fly"
+  },
+  "Fertig": {
+    "en": "Done",
+    "da": "Færdig"
+  },
+  "Kartenumkreis": {
+    "en": "Map radius",
+    "da": "Kortets radius"
+  },
+  "Die Karte lädt alle von der Quelle gemeldeten aktuellen Positionen in diesem Umkreis. Verschiebe sie, um andere Regionen zu laden. Keine vollständige Weltabdeckung.": {
+    "en": "The map loads current positions reported within this radius. Move it to load other areas. Coverage is not worldwide or complete.",
+    "da": "Kortet indlæser aktuelle positioner i denne radius. Flyt kortet for at indlæse andre områder. Dækningen er ikke global eller fuldstændig."
+  },
+  "Einheiten und Updates": {
+    "en": "Units and updates",
+    "da": "Enheder og opdateringer"
+  },
+  "Höhe: Meter · Geschwindigkeit: km/h · Entfernung: km": {
+    "en": "Altitude: metres · Speed: km/h · Distance: km",
+    "da": "Højde: meter · Fart: km/h · Afstand: km"
+  },
+  "App: 20 Sekunden gewünschtes Abrufintervall bei aktiver App. Netzwerkzeit kommt hinzu. Widget: 5 Minuten angefragt, tatsächlicher Zeitpunkt durch iOS.": {
+    "en": "Active app: roughly 20 seconds between requests, with longer waits on errors. Widgets: roughly 5 minutes requested; timing is controlled by iOS.",
+    "da": "Aktiv app: cirka 20 sekunder mellem forespørgsler, længere ved fejl. Widgets: cirka 5 minutter ønsket; iOS bestemmer tidspunktet."
+  },
+  "Datenquellen, Datenschutz und Grenzen": {
+    "en": "Sources, privacy and limitations",
+    "da": "Datakilder, privatliv og begrænsninger"
+  },
+  "iPhone-App-Einstellungen öffnen": {
+    "en": "Open iPhone app settings",
+    "da": "Åbn appindstillinger på iPhone"
+  },
+  "Einstellungen": {
+    "en": "Settings",
+    "da": "Indstillinger"
+  },
+  "Sprache": {
+    "en": "Language",
+    "da": "Sprog"
+  },
+  "Widget-Sprache separat wählen": {
+    "en": "Home Screen widgets currently use German. The app and Live Activity follow the app language.",
+    "da": "Hjemmeskærmwidgets bruger foreløbig tysk. Appen og Live Activity følger appens sprog."
+  },
+  "Geschätzt": {
+    "en": "Estimated",
+    "da": "Estimeret"
+  },
+  "Veraltet": {
+    "en": "Outdated",
+    "da": "Forældet"
+  },
+  "Prognose beendet": {
+    "en": "Prediction ended",
+    "da": "Estimering afsluttet"
+  },
+  "Letzte echte Position": {
+    "en": "Last real position",
+    "da": "Seneste reelle position"
+  },
+  "Letzte echte Daten": {
+    "en": "Last real data",
+    "da": "Seneste reelle data"
+  },
+  "Quelle": {
+    "en": "Source",
+    "da": "Kilde"
+  },
+  "Erfasste Flugzeuge": {
+    "en": "Tracked aircraft",
+    "da": "Registrerede fly"
+  },
+  "Stand": {
+    "en": "Data time",
+    "da": "Datatidspunkt"
+  },
+  "Umkreis": {
+    "en": "Radius",
+    "da": "Radius"
+  },
+  "Keine aktuelle Position verfügbar.": {
+    "en": "No current position available.",
+    "da": "Ingen aktuel position tilgængelig."
+  },
+  "Am Boden": {
+    "en": "On ground",
+    "da": "På jorden"
+  },
+  "Höhe ?": {
+    "en": "Altitude ?",
+    "da": "Højde ?"
+  },
+  "Tempo ?": {
+    "en": "Speed ?",
+    "da": "Fart ?"
+  },
+  "Unbekannt": {
+    "en": "Unknown",
+    "da": "Ukendt"
+  },
+  "Modell unbekannt": {
+    "en": "Unknown model",
+    "da": "Ukendt model"
+  },
+  "Airline unbekannt": {
+    "en": "Unknown airline",
+    "da": "Ukendt flyselskab"
+  },
+  "Quelle nicht erreichbar": {
+    "en": "Source unreachable",
+    "da": "Kilden kan ikke nås"
+  },
+  "Ungültige Antwort": {
+    "en": "Invalid response",
+    "da": "Ugyldigt svar"
+  },
+  "Rate Limit": {
+    "en": "Rate limit",
+    "da": "Forespørgselsgrænse"
+  },
+  "Wartezeit der Quelle": {
+    "en": "Source cooldown",
+    "da": "Ventetid for kilden"
+  },
+  "Nächster Abruf": {
+    "en": "Next request",
+    "da": "Næste forespørgsel"
+  },
+  "Nächster Abruf vorgemerkt.": {
+    "en": "Next request scheduled.",
+    "da": "Næste forespørgsel er planlagt."
+  },
+  "Live Activities sind nicht erlaubt. In den iPhone-Einstellungen aktivieren.": {
+    "en": "Live Activities are disabled. Enable them in iPhone settings.",
+    "da": "Live Activities er slået fra. Aktivér dem i iPhone-indstillingerne."
+  },
+  "Zuerst Standort und Flugdaten laden.": {
+    "en": "Load location and flight data first.",
+    "da": "Indlæs først lokalitet og flydata."
+  },
+  "Standort noch nicht freigegeben.": {
+    "en": "Location not yet enabled.",
+    "da": "Lokalitet er endnu ikke aktiveret."
+  },
+  "Standort verweigert. Unter Einstellungen > SkyNear freigeben.": {
+    "en": "Location denied. Enable it in Settings > SkyNear.",
+    "da": "Lokalitet afvist. Aktivér den i Indstillinger > SkyNear."
+  },
+  "Standortberechtigung nicht verfügbar.": {
+    "en": "Location permission unavailable.",
+    "da": "Tilladelse til lokalitet er ikke tilgængelig."
+  },
+  "Ungefährer Standort": {
+    "en": "Approximate location",
+    "da": "Omtrentlig lokalitet"
+  },
+  "Standort verfügbar": {
+    "en": "Location available",
+    "da": "Lokalitet tilgængelig"
+  },
+  "Standortfehler": {
+    "en": "Location error",
+    "da": "Lokalitetsfejl"
+  },
+  "App öffnen, Standort freigeben und die Standortnutzung des Widgets erlauben.": {
+    "en": "Open the app, enable location and allow widget location access.",
+    "da": "Åbn appen, aktivér lokalitet, og tillad lokalitetsadgang for widgets."
+  },
+  "Aktueller Standort nicht verfügbar. App kurz öffnen.": {
+    "en": "Current location unavailable. Open the app briefly.",
+    "da": "Aktuel lokalitet er ikke tilgængelig. Åbn appen kort."
+  },
+  "Standort ist zu alt.": {
+    "en": "Location is too old.",
+    "da": "Lokaliteten er for gammel."
+  },
+  "Nächste Flugzeuge": {
+    "en": "Nearest aircraft",
+    "da": "Nærmeste fly"
+  },
+  "Keine erfassten Flugzeuge": {
+    "en": "No tracked aircraft",
+    "da": "Ingen registrerede fly"
+  },
+  "Flüge": {
+    "en": "aircraft",
+    "da": "fly"
+  },
+  "Nächste 5": {
+    "en": "Nearest 5",
+    "da": "Nærmeste 5"
+  },
+  "Nächstes Flugzeug": {
+    "en": "Nearest aircraft",
+    "da": "Nærmeste fly"
+  },
+  "5 Flugzeuge in deiner Nähe": {
+    "en": "5 nearby aircraft",
+    "da": "5 fly i nærheden"
+  },
+  "Widget-Beschreibung": {
+    "de": "Fotos und Flugdaten. iOS steuert die Aktualisierung.",
+    "en": "Photos and flight data. Updates are controlled by iOS.",
+    "da": "Fotos og flydata. iOS bestemmer opdateringerne."
+  },
+  "Karte nicht verfügbar": {
+    "en": "Map unavailable",
+    "da": "Kort ikke tilgængeligt"
+  },
+  "Keine erfassten Flugzeuge im Umkreis.": {
+    "en": "No tracked aircraft within the radius.",
+    "da": "Ingen registrerede fly i området."
+  },
+  "App öffnen · Standort erlauben": {
+    "en": "Open app · Allow location",
+    "da": "Åbn app · Tillad lokalitet"
+  },
+  "Die fünf nächsten Flugzeuge werden hier angezeigt.": {
+    "en": "The five nearest aircraft appear here.",
+    "da": "De fem nærmeste fly vises her."
+  },
+  "SkyNear öffnen und Standort für App und Widget erlauben.": {
+    "en": "Open SkyNear and allow location for the app and widgets.",
+    "da": "Åbn SkyNear, og tillad lokalitet for appen og widgets."
+  },
+  "Prognose-Hinweis": {
+    "de": "Geschätzt anhand der zuletzt gemessenen Geschwindigkeit und des Kurses. Die Höhe ist der letzte Messwert. Die Prognose endet nach 15 Minuten.",
+    "en": "Estimated using the last measured speed and track. Altitude is the last measured value. Prediction ends after 15 minutes.",
+    "da": "Estimeret ud fra senest målte fart og kurs. Højden er senest målte værdi. Estimeringen slutter efter 15 minutter."
+  },
+  "Radius": {
+    "en": "Radius",
+    "da": "Radius"
+  },
+  "Radar": {
+    "en": "Radar",
+    "da": "Radar"
+  },
+  "Airline": {
+    "en": "Airline",
+    "da": "Flyselskab"
+  },
+  "Widget-Abruf hat zu lange gedauert. App öffnen und erneut versuchen.": {
+    "en": "Widget loading timed out. Open the app and try again.",
+    "da": "Widgetens indlæsning tog for lang tid. Åbn appen og prøv igen."
+  },
+  "Widget-Abruf fehlgeschlagen. App öffnen und erneut versuchen.": {
+    "en": "Widget loading failed. Open the app and try again.",
+    "da": "Widgeten kunne ikke indlæses. Åbn appen og prøv igen."
+  },
+  "Zusatzdaten konnten nicht vollständig geladen werden. Positionsdaten sind verfügbar.": {
+    "en": "Additional details could not be fully loaded. Position data is available.",
+    "da": "Ekstra oplysninger kunne ikke indlæses helt. Positionsdata er tilgængelige."
+  },
+  "Live-Activity-Aktion läuft bereits. Bitte kurz warten.": {
+    "en": "A Live Activity action is already running. Please wait briefly.",
+    "da": "En Live Activity-handling er allerede i gang. Vent et øjeblik."
+  },
+  "ActivityKit hat nicht rechtzeitig geantwortet. Erneut versuchen.": {
+    "en": "ActivityKit did not respond in time. Try again.",
+    "da": "ActivityKit svarede ikke i tide. Prøv igen."
+  },
+  "Live Activity beendet.": {
+    "en": "Live Activity ended.",
+    "da": "Live Activity afsluttet."
+  },
+  "Die bisherige Live Activity war bereits beendet.": {
+    "en": "The previous Live Activity had already ended.",
+    "da": "Den tidligere Live Activity var allerede afsluttet."
+  },
+  "Kein Gerätestandort für die Live Activity verfügbar.": {
+    "en": "No device location is available for the Live Activity.",
+    "da": "Ingen lokalitet er tilgængelig for Live Activity."
+  },
+  "Keine aktuellen Flugzeuge für die Live Activity verfügbar. Zuerst die Umgebung laden.": {
+    "en": "No current aircraft are available for the Live Activity. Load the nearby area first.",
+    "da": "Ingen aktuelle fly er tilgængelige for Live Activity. Indlæs først området i nærheden."
+  },
+  "Live-Activity-Daten sind zu groß": {
+    "en": "Live Activity data exceeds the size limit",
+    "da": "Live Activity-data er for store"
+  },
+  "ActivityKit hat die Live Activity sofort beendet": {
+    "en": "ActivityKit immediately ended the Live Activity",
+    "da": "ActivityKit afsluttede straks Live Activity"
+  },
+  "Live Activity vom System angenommen. Auf Sperrbildschirm oder Dynamic Island prüfen.": {
+    "en": "The system accepted the Live Activity. Check the Lock Screen or Dynamic Island.",
+    "da": "Systemet accepterede Live Activity. Kontrollér låseskærmen eller Dynamic Island."
+  },
+  "Modellbild": {
+    "en": "Model photo",
+    "da": "Modelfoto"
+  },
+  "Letzter Standort": {
+    "en": "Last location",
+    "da": "Seneste position"
+  },
+  "Tempo": {
+    "en": "Speed",
+    "da": "Hastighed"
+  },
+  "Letzter Hintergrundabruf": {
+    "en": "Last background fetch",
+    "da": "Seneste baggrundshentning"
+  },
+  "Modellfoto zeigt ein anderes Flugzeug; Lackierung kann abweichen.": {
+    "en": "The model photo shows a different aircraft; its livery may differ.",
+    "da": "Modelfotoet viser et andet fly; bemalingen kan afvige."
+  },
+  "Widget-Prognosen: Minutenschritte angefragt, maximal 15 Minuten. iOS kann Einträge verzögern. Höhe und Tempo bleiben Messwerte.": {
+    "en": "Widget predictions: one-minute steps requested, up to 15 minutes. iOS may delay entries. Altitude and speed remain measured values.",
+    "da": "Widgetprognoser: minuttrin anmodet, højst 15 minutter. iOS kan forsinke visningen. Højde og hastighed forbliver målinger."
+  },
+  "Ohne Server: Live Activity aktualisiert bei aktiver App und gelegentlich im Hintergrund. Kein garantierter Hintergrundtakt.": {
+    "en": "Without a server: Live Activity updates while the app is active and occasionally in the background. No guaranteed background interval.",
+    "da": "Uden server: Live Activity opdateres, mens appen er aktiv, og lejlighedsvis i baggrunden. Intet garanteret baggrundsinterval."
+  },
+  "Entfernung": {
+    "en": "Distance",
+    "da": "Afstand"
+  },
+  "Seitlich": {
+    "en": "Passing across",
+    "da": "Passerer forbi"
+  },
+  "Nähert sich": {
+    "en": "Approaching",
+    "da": "Nærmer sig"
+  },
+  "Entfernt sich": {
+    "en": "Moving away",
+    "da": "Bevæger sig væk"
+  }
+}

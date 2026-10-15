@@ -1,0 +1,31 @@
+Model reference photos (not the tracked aircraft). Resized JPEG derivatives; each retains its listed license.
+
+Airbus A320 - Benjamin Shaw
+CC BY-SA 4.0
+https://commons.wikimedia.org/wiki/File:Airbus_A320_and_a_seagull.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Airbus A321 - MaxEddi
+Public domain
+https://commons.wikimedia.org/wiki/File:Airbus_A321-100.jpg
+https://commons.wikimedia.org/wiki/Template:PD-self
+
+Boeing 737-800 - João Pedro Wanzeller
+CC BY-SA 4.0
+https://commons.wikimedia.org/wiki/File:B737-800.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Airbus A320neo - Ziongarage
+CC0 1.0
+https://commons.wikimedia.org/wiki/File:Airbus_A320neo_CC-DBN.jpg
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Airbus A319 - Leozengy
+CC BY-SA 4.0
+https://commons.wikimedia.org/wiki/File:Airbus_a319.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Airbus A321neo - Clemens Vasters
+CC BY 2.0
+https://commons.wikimedia.org/wiki/File:Airbus_A321neo_%2835121128500%29.jpg
+https://creativecommons.org/licenses/by/2.0/

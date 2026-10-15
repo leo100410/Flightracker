@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SkyNearAppGroup</key>
+	<string>group.de.leola.skynear</string>
+	<key>CFBundleDisplayName</key>
+	<string>SkyNear</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>7</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array><string>de.leola.skynear.refresh</string></array>
+	<key>UIBackgroundModes</key>
+	<array><string>fetch</string></array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SkyNear benötigt deinen Standort, um Flugzeuge in deiner Nähe anzuzeigen. Für die Umkreissuche werden gerundete Koordinaten an ADSB.lol oder bei Ausfall an adsb.fi gesendet. Für die Widgetkarte werden Karten von Apple geladen.</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>de.leola.skynear.links</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>skynear</string>
+			</array>
+		</dict>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

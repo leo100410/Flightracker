@@ -1,0 +1,14 @@
+Bash-Syntax build-ipa.sh: OK (bash -n)
+Python-Syntax verify-ipa.py: OK (ast.parse)
+Drei XML-Plists: valide
+Produkt-/Target-Namen, Ressourcenpfade, Iconformat, Swift-6-Modus und iOS-17-Ziel: statisch konsistent
+IPA-Prüfscript: synthetic-valid: erwartetes Ergebnis
+IPA-Prüfscript: synthetic-no-widget: erwartetes Ergebnis
+IPA-Prüfscript: synthetic-wrong-arch: erwartetes Ergebnis
+IPA-Testdateien sind synthetische ZIPs mit Mach-O-Headern, keine kompilierten Apps. Sie werden nicht ausgeliefert.
+Swift/XCTest: NICHT kompiliert oder ausgeführt; kein Swift-Compiler/Apple-SDK/xtool in dieser Umgebung.
+Echte IPA: NICHT erzeugt. ESign und iPhone: NICHT getestet.
+API: Dokumentationsprüfung, aber direkte HTTP-Testabrufe mit Recherchewerkzeug nicht erfolgreich.
+Swift-6-Concurrency: statische Durchsicht; MainActor für UI/Standort, Actor für Netzwerk und Widgetcache; keine pauschale Sendable-Abschaltung.
+Projektanleitung Projektumgebung_iOS_xtool.md wurde gelesen; vorhandene Umgebung wird nicht neu eingerichtet.
+Widget: StaticConfiguration mit TimelineProvider; keine AppIntent-Metadatenpipeline notwendig. Die Callbacks sind gemäß aktueller WidgetKit-Signatur @Sendable; Context wird nicht in einen Task übertragen.

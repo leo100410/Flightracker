@@ -1,0 +1,56 @@
+[
+  {
+    "code": "A320",
+    "title": "Airbus A320",
+    "filename": "ModelPhoto-A320",
+    "author": "Benjamin Shaw",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320_and_a_seagull.jpg",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "code": "A321",
+    "title": "Airbus A321",
+    "filename": "ModelPhoto-A321",
+    "author": "MaxEddi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321-100.jpg",
+    "licenseURL": "https://commons.wikimedia.org/wiki/Template:PD-self"
+  },
+  {
+    "code": "B738",
+    "title": "Boeing 737-800",
+    "filename": "ModelPhoto-B738",
+    "author": "João Pedro Wanzeller",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:B737-800.jpg",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "code": "A20N",
+    "title": "Airbus A320neo",
+    "filename": "ModelPhoto-A20N",
+    "author": "Ziongarage",
+    "license": "CC0 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Airbus_A320neo_CC-DBN.jpg",
+    "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  {
+    "code": "A319",
+    "title": "Airbus A319",
+    "filename": "ModelPhoto-A319",
+    "author": "Leozengy",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Airbus_a319.jpg",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "code": "A21N",
+    "title": "Airbus A321neo",
+    "filename": "ModelPhoto-A21N",
+    "author": "Clemens Vasters",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Airbus_A321neo_%2835121128500%29.jpg",
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/"
+  }
+]

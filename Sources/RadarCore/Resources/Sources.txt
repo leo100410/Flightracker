@@ -1,0 +1,27 @@
+SkyNear 1.1
+Positionen: ADSB.lol, https://www.adsb.lol/
+Positionsdaten: ADSB.lol, Lizenz ODbL 1.0. Lizenz: https://opendatacommons.org/licenses/odbl/1-0/
+API: https://api.adsb.lol/docs
+Fallback: adsb.fi, https://adsb.fi/
+adsb.fi Open Data: ausschließlich persönliche, nichtkommerzielle Nutzung. Keine Weiterlizenzierung, kein Verkauf oder Vermieten von Daten oder Dienst. Ohne Gewähr. Quellenverlinkung erforderlich; Zugang kann beendet werden. Bedingungen: https://github.com/adsbfi/opendata/blob/main/README.md
+Kartensnapshots: Apple Maps. Für die Karte fallen zusätzliche Kartenanfragen an Apple an.
+Referenzdaten und bekannte Rufzeichenrouten: adsbdb, https://www.adsbdb.com/
+Fotos: airport-data über die von adsbdb gelieferten Bild-URLs. Bilder bleiben Eigentum ihrer jeweiligen Urheber. Die API liefert keinen individuellen Fotografennamen. Ein Foto wird nur angezeigt, wenn eine HTTPS-Bild-URL verfügbar ist.
+
+ADS-B/MLAT erfasst nicht jedes Flugzeug. Flugzeuge ohne Position oder mit einer über 90 Sekunden alten Position werden nicht als aktuell dargestellt. Die Karte lädt einen Bereich von höchstens 250 nautischen Meilen (463 km) um den gewählten Mittelpunkt, keinen vollständigen Weltfeed.
+
+Höhe: barometrische Höhe, ersatzweise geometrische Höhe, in Meter umgerechnet. Sie ist keine Höhe über dem Boden. Geschwindigkeit: Geschwindigkeit über Grund, in km/h. Entfernung: horizontale Luftlinie, nicht 3D-Distanz.
+
+Routen: Nachschlagewerte für ein Rufzeichen, keine Garantie für den aktuellen tatsächlichen Flug, Zwischenstopps, Umleitungen oder Landeabsicht. Airline und eingetragener Eigentümer sind unterschiedliche Angaben.
+
+Die Routenreferenzdaten werden in der App nur kurzfristig im Arbeitsspeicher zwischengespeichert. Rechtehinweis der adsbdb-Dokumentation: Routendaten von David Taylor und Jim Mason dürfen ohne ausdrückliche Erlaubnis nicht kopiert, veröffentlicht oder in andere Datenbanken aufgenommen werden. Vor einer Veröffentlichung oder kommerziellen Nutzung der App die jeweiligen Bedingungen und Fotorechte klären.
+
+Standort: nur bei Benutzung; kein Always-Tracking, kein Hintergrundortungsmodus. Für die Umkreissuche werden Koordinaten auf drei Nachkommastellen gerundet an ADSB.lol oder bei Ausfall an adsb.fi übermittelt. adsbdb erhält Hex-Kennungen und Rufzeichen; Bildanbieter erhält übliche Webanfragen, aber keine Standortkoordinaten von SkyNear. Apple erhält Kartenanfragen für den dargestellten Bereich. Alle Dienste sehen technisch die IP-Adresse. Kein eigener Server, kein Login, keine API-Schlüssel, keine Analytics.
+
+Widgets: laden Daten eigenständig, teilen innerhalb der Extension Abrufdienst und Positionscache. iOS steuert die Aktualisierung; die gewünschte 5-Minuten-Timeline ist nicht garantiert. Zwei direkt registrierte statische Widgets, vorläufig auf Deutsch. Die App-Sprachwahl bleibt erhalten; Live Activity folgt der App-Sprache. Keine App Group und keine App-Intents-Metadaten nötig. Die Widgets behalten nur die fünf angezeigten Flugzeuge im aktuellen Positionscache; keine Routen/Fotos auf Platte. Ein insgesamt begrenzter Abruf liefert auch bei ausstehenden Zusatzdaten Positionen oder einen Fehlerhinweis. Eine maximal 30 Minuten alte Positionskopie kann bei Standortfehlern als ausdrücklich veralteter Offline-Stand gezeigt werden.
+
+Prognose: nur bei Ausfall oder Sperrzeit beider Positionsquellen, aus letzter echter Koordinate, echter Positionszeit, Geschwindigkeit und Kurs. Maximal 15 Minuten ab echter Position; keine Bodenflugzeuge oder fehlenden Ausgangsdaten. Orange und Geschätzt/~ bedeuten eine geradlinige Schätzung, keine neue Messung. Höhe bleibt letzter Messwert. Keine Vorhersage von Kurven, Landungen oder Höhe. Eine erfolgreiche leere Antwort löscht alte Flugzeuge aus dem jeweiligen Suchbereich. Widget-Timelines berechnen Positionen ungefähr im 5-Minuten-Abstand und enthalten einen Endzustand; tatsächliche Anzeige durch iOS. Ein alter v1-Cache ohne echte Positionszeit wird nicht prognostiziert.
+
+Live Activity: Aktualisierung durch die laufende App, Sprache folgt der App. Ohne Backend und APNs keine zugesagte dauerhafte Hintergrundaktualisierung oder automatische Hintergrundprojektion. Echte Daten werden nach 60 Sekunden als veraltet markiert. Geschätzte Daten erhalten spätestens am frühesten Ablauf der angezeigten Positionen eine Ablaufmarkierung; Anzeigezeitpunkt durch iOS. Links kompakt steht ein tatsächlicher Modellcode, bei unbekanntem Code —. Sperrbildschirm und Dynamic Island bieten weniger Platz als die Widgets. Fotos befinden sich in der App und den Widgets, nicht in der Live Activity.
+
+Nicht zur Navigation, Flugsicherung oder sicherheitskritischen Entscheidungen verwenden.

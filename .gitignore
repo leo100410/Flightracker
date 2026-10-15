@@ -1,0 +1,26 @@
+.build/
+.swiftpm/
+xtool/
+*.ipa
+*.log
+.skynear-build-lock/
+.bsp/
+logfiles/
+patch-backups/
+SkyNear_*_Fix/
+*.bak
+*.zip
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.pem
+*.key
+*.mobileprovision
+*.cer

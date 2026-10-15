@@ -1,0 +1,10 @@
+version: 1
+bundleID: de.leola.skynear
+product: SkyNear
+infoPath: App-Info.plist
+iconPath: Resources/AppIcon.png
+resources:
+  - Resources/PrivacyInfo.xcprivacy
+extensions:
+  - product: SkyNearWidgets
+    infoPath: Widget-Info.plist
