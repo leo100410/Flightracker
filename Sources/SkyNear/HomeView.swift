@@ -2,6 +2,7 @@ import SwiftUI
 import MapKit
 import RadarCore
 
+#if os(iOS)
 struct HomeView: View {
     @Environment(\.skyLanguage) private var language
     @ObservedObject var store: RadarStore
@@ -69,6 +70,7 @@ struct HomeView: View {
         }
     }
 }
+#endif
 
 struct MapScreen: View {
     @Environment(\.skyLanguage) private var language
@@ -101,7 +103,12 @@ struct MapScreen: View {
                     }
                 }
                 .mapStyle(.standard(elevation: .flat))
-                .mapControls { MapCompass(); MapScaleView() }
+                .mapControls {
+                    MapCompass(); MapScaleView()
+                    #if os(macOS)
+                    MapZoomStepper()
+                    #endif
+                }
                 .onMapCameraChange(frequency: .onEnd) { context in
                     let center = GeoPoint(latitude: context.region.center.latitude, longitude: context.region.center.longitude)
                     panTask?.cancel()
@@ -134,17 +141,24 @@ struct MapScreen: View {
                 .padding(12)
             }
             .navigationTitle("SkyNear")
-            .navigationBarTitleDisplayMode(.inline)
+            .skyInlineTitle()
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .skyLeading) {
+                    #if os(macOS)
+                    SettingsLink { Image(systemName: "slider.horizontal.3") }
+                        .help(language.text("Einstellungen"))
+                    #else
                     Button { settings = true } label: { Image(systemName: "slider.horizontal.3") }
+                    #endif
                 }
-                ToolbarItemGroup(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .skyTrailing) {
                     Button { store.restartLoop() } label: { Image(systemName: "arrow.clockwise") }
+                        .keyboardShortcut("r", modifiers: .command)
                     Button {
                         if let point = location.point { move(to: point); store.centerOnMe() }
                         else { location.start() }
                     } label: { Image(systemName: "location.fill") }
+                        .keyboardShortcut("l", modifiers: .command)
                 }
             }
             .onChange(of: location.point) { _, point in
@@ -189,6 +203,7 @@ struct NearbyScreen: View {
                     }
                     if let error = store.nearbyError ?? store.error { Text(error).foregroundStyle(.orange) }
                 } header: { Text(language.text("Die fünf nächsten erfassten Flugzeuge")) }
+                #if os(iOS)
                 Section(language.text("Sperrbildschirm")) {
                     Button {
                         Task { await store.toggleLive() }
@@ -207,6 +222,7 @@ struct NearbyScreen: View {
                     Text(language.text("iOS bestimmt den Aktualisierungszeitpunkt. Prüfe immer den angezeigten Datenstand."))
                         .font(.caption).foregroundStyle(.secondary)
                 }
+                #endif
             }
             .navigationTitle(language.text("In deiner Nähe"))
             .refreshable { await store.refresh() }
@@ -250,8 +266,8 @@ struct PlanePhoto: View {
     var data: Data? = nil
     var modelCode: String? = nil
     var body: some View {
-        if let data, let image = UIImage(data: data) {
-            Image(uiImage: image).resizable().scaledToFill().clipped()
+        if let data, let image = PlatformImage(data: data) {
+            Image(platformImage: image).resizable().scaledToFill().clipped()
                 .overlay(alignment: .bottomTrailing) {
                     if modelCode != nil { modelLabel }
                 }
@@ -268,8 +284,8 @@ struct PlanePhoto: View {
             .padding(3).background(.black.opacity(0.8))
     }
     @ViewBuilder private var fallback: some View {
-        if let reference, let data = reference.data, let image = UIImage(data: data) {
-            Image(uiImage: image).resizable().scaledToFill().clipped()
+        if let reference, let data = reference.data, let image = PlatformImage(data: data) {
+            Image(platformImage: image).resizable().scaledToFill().clipped()
                 .overlay(alignment: .bottomTrailing) { modelLabel }
         } else { placeholder(language.text("Kein Foto")) }
     }

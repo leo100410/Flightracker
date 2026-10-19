@@ -1,8 +1,10 @@
 import Foundation
 import Combine
 import CoreLocation
+#if os(iOS)
 import ActivityKit
 import WidgetKit
+#endif
 import RadarCore
 
 @MainActor
@@ -47,10 +49,12 @@ final class RadarStore: ObservableObject {
     private var lastLiveState: NearbyActivityAttributes.ContentState?
 
     init() {
+        #if os(iOS)
         activityID = Activity<NearbyActivityAttributes>.activities.first {
             $0.activityState == .active || $0.activityState == .stale
         }?.id
         liveRunning = activityID != nil
+        #endif
         locationSubscription = location.$point.sink { [weak self] point in
             guard let self, let point else { return }
             if self.mapCenter == nil { self.mapCenter = point }
@@ -165,6 +169,7 @@ final class RadarStore: ObservableObject {
         guard realNearby.map({ value.dataDate >= $0.dataDate }) ?? true else { return }
         realNearby = value; nearbyUnavailable = false; nearbyIssues = value.sourceIssues ?? []; nearbyError = nil
         RadarDiagnostics.record("app nearby accepted real=\(RadarDiagnostics.stamp(value.dataDate)) count=\(value.planes.count)")
+        #if os(iOS)
         BackgroundRefresh.save(value)
         // Request only after positions are committed, before optional enrichment can stall.
         if Date().timeIntervalSince(lastWidgetReload) >= 60 {
@@ -172,6 +177,7 @@ final class RadarStore: ObservableObject {
             WidgetCenter.shared.reloadAllTimelines()
             lastWidgetReload = Date()
         }
+        #endif
     }
     private func preserveMetadata(_ value: RadarSnapshot, previous: RadarSnapshot?) -> RadarSnapshot {
         guard let previous else { return value }
@@ -229,6 +235,7 @@ final class RadarStore: ObservableObject {
             validUntil: nearby.nearest(to: user).map { PositionPrediction.expiry(of: $0, fetchedAt: nearby.fetchedAt) }.min() ?? Date(),
             status: status.isEmpty ? nil : String(status.prefix(100)))
     }
+    #if os(iOS)
     func toggleLive() async {
         guard !liveActionInProgress else {
             liveError = language.text("Live-Activity-Aktion läuft bereits. Bitte kurz warten.")
@@ -322,4 +329,9 @@ final class RadarStore: ObservableObject {
         if !stillActive { activityID = nil; liveRunning = false; lastLiveState = nil }
         else { lastLiveState = state }
     }
+    #else
+    // Live Activities do not exist on the Mac; the shared refresh loop calls these as no-ops.
+    private func reconcileLiveState() {}
+    private func updateLive() async {}
+    #endif
 }

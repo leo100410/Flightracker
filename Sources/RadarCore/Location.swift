@@ -19,7 +19,12 @@ public final class AppLocation: NSObject, ObservableObject, @preconcurrency CLLo
         switch manager.authorizationStatus {
         case .notDetermined: manager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse: manager.startUpdatingLocation()
-        case .denied, .restricted: message = "Standort verweigert. Unter Einstellungen > SkyNear freigeben."
+        case .denied, .restricted:
+            #if os(macOS)
+            message = "Standort verweigert. Unter Systemeinstellungen > Datenschutz & Sicherheit > Ortungsdienste freigeben."
+            #else
+            message = "Standort verweigert. Unter Einstellungen > SkyNear freigeben."
+            #endif
         @unknown default: message = "Standortberechtigung nicht verfügbar."
         }
     }

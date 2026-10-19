@@ -2,9 +2,9 @@
 
 ## Project Structure & Module Organization
 
-SkyNear is a Swift 6 package targeting iOS 17+, with no Xcode project or backend. `Sources/RadarCore/` contains shared models, networking, location handling, and attribution resources. `Sources/SkyNear/` contains the SwiftUI app, views, state store, and Live Activity operations. `Sources/SkyNearWidgets/` implements WidgetKit and ActivityKit presentation. XCTest cases live in `Tests/RadarCoreTests/`. App assets and the privacy manifest live in `Resources/`.
+SkyNear is a Swift 6 app for iOS 17+ and macOS 14+ with no backend. It builds either as a SwiftPM package with xtool (iOS) or from `SkyNear.xcodeproj` (iOS and a Universal macOS app). `Sources/RadarCore/` contains shared models, networking, location handling, and attribution resources. `Sources/SkyNear/` contains the SwiftUI app, views, state store, and Live Activity operations. `Sources/SkyNearWidgets/` implements WidgetKit and ActivityKit presentation. `Sources/SkyNearMac/` holds the macOS app shell; the Mac target also compiles `Sources/SkyNear/`, so guard iOS-only APIs (UIKit, ActivityKit, BackgroundTasks, WidgetCenter) with `#if os(iOS)` and use the shims in `PlatformSupport.swift`. XCTest cases live in `Tests/RadarCoreTests/`. App assets and the privacy manifest live in `Resources/`.
 
-`Package.swift` defines targets; `xtool.yml` and the two root `*-Info.plist` files configure packaging. Treat `SkyNear_*_Fix/`, `patch-backups/`, and `.bak` files as repair utilities or historical snapshots; make application changes in `Sources/`.
+`Package.swift` defines SwiftPM targets; `SkyNear.xcodeproj` uses synchronized folders over the same `Sources/` directories, with `Mac-Info.plist`, `Entitlements/`, and `Resources/Assets.xcassets`; `xtool.yml` and the two root `*-Info.plist` files configure packaging. Treat `SkyNear_*_Fix/`, `patch-backups/`, and `.bak` files as repair utilities or historical snapshots; make application changes in `Sources/`.
 
 ## Build, Test, and Development Commands
 
@@ -14,6 +14,8 @@ Run build commands in Ubuntu/WSL from the repository root with Swift, an appropr
 - `xtool dev build --ipa`: runs the build directly.
 - `python3 verify-ipa.py "path/to/SkyNear.ipa"`: checks package structure, arm64 executables, and extension configuration.
 - `python3 verify-widget-ipa.py "path/to/SkyNear.ipa"`: checks widget executable linkage.
+- `xcodebuild -project SkyNear.xcodeproj -scheme "SkyNear macOS" -configuration Release -destination "generic/platform=macOS" build`: builds the Universal Mac app on macOS.
+- `xcodebuild -project SkyNear.xcodeproj -scheme "SkyNear macOS" -destination "platform=macOS" test`: runs `RadarCoreTests` on the Mac.
 - `python3 verify-signing-space.py "path/to/SkyNear.ipa"`: checks Mach-O space needed for signing.
 
 Run only one build at a time. Remove a stale build lock only after confirming the previous process has stopped.

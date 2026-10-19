@@ -1,6 +1,8 @@
 import Foundation
 import CoreLocation
+#if canImport(ActivityKit)
 import ActivityKit
+#endif
 
 public struct GeoPoint: Codable, Hashable, Sendable {
     public var latitude: Double
@@ -220,7 +222,8 @@ public enum RadarError: LocalizedError, Sendable {
     }
 }
 
-public struct NearbyActivityAttributes: ActivityAttributes {
+// ActivityKit is iOS-only; the payload types stay shared so tests and the Mac app compile.
+public struct NearbyActivityAttributes: Codable, Hashable, Sendable {
     public struct ContentState: Codable, Hashable, Sendable {
         public var updated: Date
         public var rows: [ActivityRow]
@@ -239,6 +242,9 @@ public struct NearbyActivityAttributes: ActivityAttributes {
     public var title: String
     public init(title: String) { self.title = title }
 }
+#if canImport(ActivityKit) && os(iOS)
+extension NearbyActivityAttributes: ActivityAttributes {}
+#endif
 public struct ActivityRow: Codable, Hashable, Sendable, Identifiable {
     public var id: String
     public var label: String
