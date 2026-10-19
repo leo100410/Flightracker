@@ -46,20 +46,12 @@ enum WidgetMapSnapshot {
         options.scale = 2
         options.traitCollection = UITraitCollection(userInterfaceStyle: .dark)
         let key = "\(real.fetchedAt.timeIntervalSince1970):\(options.size):\(options.region.center.latitude):\(options.region.center.longitude):\(options.region.span.latitudeDelta):\(options.region.span.longitudeDelta)"
-        let snapshotter = MKMapSnapshotter(options: options)
-        let timeout = Task { @MainActor in
-            do { try await Task.sleep(for: .seconds(4)) }
-            catch { return }
-            RadarDiagnostics.record("widget map timeout")
-            snapshotter.cancel()
-        }
-        defer { timeout.cancel() }
         do {
             let snapshot: MKMapSnapshotter.Snapshot
             if let cached, cached.key == key, Date().timeIntervalSince(cached.date) < 300 {
                 snapshot = cached.snapshot
             } else {
-                snapshot = try await snapshotter.start()
+                snapshot = try await capture(MKMapSnapshotter(options: options), seconds: 4)
                 cached = (key, Date(), snapshot)
             }
             let bytes = snapshot.image.jpegData(compressionQuality: 0.8)
@@ -72,7 +64,39 @@ enum WidgetMapSnapshot {
             }
         } catch { RadarDiagnostics.record("widget map failed \(RadarDiagnostics.errorCode(error))"); return dates.map { _ in MapFrame(image: nil) } }
     }
+    // The timeout resumes the caller itself. cancel() is not documented to call back,
+    // and a lost resume would leave getTimeline without a completion and the widget frozen.
+    private static func capture(_ snapshotter: MKMapSnapshotter, seconds: Double) async throws -> MKMapSnapshotter.Snapshot {
+        let race = SnapshotRace()
+        try await withCheckedThrowingContinuation { continuation in
+            race.continuation = continuation
+            let work = Task { @MainActor in
+                do { race.snapshot = try await snapshotter.start(); race.finish(nil) }
+                catch { race.finish(error) }
+            }
+            Task { @MainActor in
+                do { try await Task.sleep(for: .seconds(seconds)) }
+                catch { return }
+                guard race.continuation != nil else { return }
+                RadarDiagnostics.record("widget map timeout")
+                snapshotter.cancel(); work.cancel()
+                race.finish(CancellationError())
+            }
+        }
+        guard let snapshot = race.snapshot else { throw CancellationError() }
+        return snapshot
+    }
 }
+@MainActor
+private final class SnapshotRace {
+    var continuation: CheckedContinuation<Void, any Error>?
+    var snapshot: MKMapSnapshotter.Snapshot?
+    func finish(_ error: (any Error)?) {
+        if let error { continuation?.resume(throwing: error) } else { continuation?.resume() }
+        continuation = nil
+    }
+}
+
 struct NearestProvider: TimelineProvider, Sendable {
     var language: AppLanguage = .de
     func placeholder(in context: Context) -> NearestEntry {

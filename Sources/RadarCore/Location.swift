@@ -60,6 +60,13 @@ public final class WidgetLocationRequest: NSObject, @preconcurrency CLLocationMa
             throw RadarError.location("App öffnen, Standort freigeben und die Standortnutzung des Widgets erlauben.")
         }
         manager.desiredAccuracy = kCLLocationAccuracyKilometer
+        // A recent system fix avoids a cold location request on every reload, which often outlasts the timeout.
+        if let location = manager.location, location.horizontalAccuracy >= 0,
+           abs(location.timestamp.timeIntervalSinceNow) < 300 {
+            let point = GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            LocationMemory.save(SavedLocation(point: point, measuredAt: location.timestamp))
+            return point
+        }
         return try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { continuation in
                 if Task.isCancelled {
