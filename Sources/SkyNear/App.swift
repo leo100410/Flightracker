@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 import RadarCore
 
@@ -18,3 +19,4 @@ struct SkyNearApp: App {
         }
     }
 }
+#endif

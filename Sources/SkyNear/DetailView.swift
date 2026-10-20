@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 import MapKit
 import RadarCore
 
@@ -104,8 +103,8 @@ struct DetailView: View {
             }.padding()
         }
         .navigationTitle(language.text("Flugzeug"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar { ToolbarItem(placement: .topBarTrailing) { Button(language.text("Fertig")) { dismiss() } } }
+        .skyInlineTitle()
+        .toolbar { ToolbarItem(placement: .skyDone) { Button(language.text("Fertig")) { dismiss() } } }
         .task(id: initial.id) {
             fetching = true
             let result = await store.details(for: initial)
@@ -139,7 +138,9 @@ struct SettingsView: View {
                 Picker(language.text("Sprache"), selection: $store.language) {
                     ForEach(AppLanguage.allCases) { item in Text(item.title).tag(item) }
                 }
+                #if os(iOS)
                 Text(language.text("Widget-Sprache separat wählen")).font(.caption)
+                #endif
             }
             Section(language.text("Kartenumkreis")) {
                 Picker(language.text("Radius"), selection: $store.radiusKM) {
@@ -153,6 +154,10 @@ struct SettingsView: View {
             }
             Section(language.text("Einheiten und Updates")) {
                 Text(language.text("Höhe: Meter · Geschwindigkeit: km/h · Entfernung: km"))
+                #if os(macOS)
+                Text(language.text("App: 20 Sekunden gewünschtes Abrufintervall bei geöffnetem Fenster. Netzwerkzeit kommt hinzu. Im Ruhezustand des Mac ruht der Abruf."))
+                    .font(.caption)
+                #else
                 Text(language.text("App: 20 Sekunden gewünschtes Abrufintervall bei aktiver App. Netzwerkzeit kommt hinzu. Widget: 5 Minuten angefragt, tatsächlicher Zeitpunkt durch iOS."))
                     .font(.caption)
                 Text(language.text("Widget-Prognosen: Minutenschritte angefragt, maximal 15 Minuten. iOS kann Einträge verzögern. Höhe und Tempo bleiben Messwerte."))
@@ -168,18 +173,21 @@ struct SettingsView: View {
                 if let error = UserDefaults.standard.string(forKey: "skynear.background-error.v1") {
                     Text(error).font(.caption).foregroundStyle(.orange)
                 }
+                #endif
             }
             Section(language.text("Datenquellen, Datenschutz und Grenzen")) {
                 Text(SourceInformation.text(in: language)).font(.caption)
                 Link("ADSB.lol", destination: URL(string: "https://www.adsb.lol/")!)
                 Link("adsb.fi", destination: URL(string: "https://adsb.fi/")!)
                 Link("adsbdb", destination: URL(string: "https://www.adsbdb.com/")!)
-                Button(language.text("iPhone-App-Einstellungen öffnen")) {
-                    if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
-                }
+                Button(language.text(PlatformSettings.titleKey)) { PlatformSettings.open() }
             }
         }
         .navigationTitle(language.text("Einstellungen"))
+        #if os(iOS)
         .toolbar { ToolbarItem(placement: .topBarTrailing) { Button(language.text("Fertig")) { dismiss() } } }
+        #else
+        .formStyle(.grouped)
+        #endif
     }
 }

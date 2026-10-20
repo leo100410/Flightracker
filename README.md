@@ -23,6 +23,31 @@ WSL war in der Sandbox blockiert und wurde für den konkreten Prüf-/Buildaufruf
 - Live Activity behält das bisherige Grundlayout. Links in der kompakten Dynamic Island steht der echte Modellcode, sonst —; rechts die Entfernung.
 - Bei Ausfall beider Positionsquellen: geradlinige geografische Prognose für bereits erfasste Flugzeuge, höchstens 15 Minuten seit der echten Position. Orange, Geschätzt/Estimated/Estimeret und ~ kennzeichnen Schätzungen. Keine Bodenflugzeuge, fehlenden Ausgangsdaten, erfundenen Kurven, Landungen oder Höhenänderungen. Eine erfolgreiche leere Antwort entfernt alte Flugzeuge aus ihrem Suchbereich.
 
+## Xcode-Projekt und macOS-App
+
+Zusätzlich zum xtool-Build gibt es `SkyNear.xcodeproj` (Xcode 16 oder neuer; geprüft mit Xcode 26.3). Es verwendet dieselben Ordner unter `Sources/` als synchronisierte Gruppen; neue Dateien erscheinen ohne Projektänderung. `Package.swift` und `xtool.yml` bleiben unverändert nutzbar.
+
+| Target | Plattform | Inhalt |
+| --- | --- | --- |
+| `RadarCore` | iOS 17+, macOS 14+ | Gemeinsames Framework mit Modellen, Quellen, Prognose und Ressourcen |
+| `SkyNear` (Schema `SkyNear iOS`) | iOS 17+ | iPhone-App mit eingebetteter Widget-Extension |
+| `SkyNearWidgets` | iOS 17+ | Homescreen-Widgets und Live Activity |
+| `SkyNear macOS` (Schema `SkyNear macOS`) | macOS 14+ | Native SwiftUI-Mac-App, Universal (arm64 + x86_64) |
+| `RadarCoreTests` | macOS, iOS | XCTest für `RadarCore` |
+
+Mac-App: Seitenleiste mit den fünf nächsten Flugzeugen, Karte als Hauptbereich, Details als Sheet, Einstellungen über ⌘, (Sprache, Radius, Quellen, Diagnose). ⌘R aktualisiert, ⌘L zentriert auf den Standort. Abrufe laufen nur bei geöffnetem Fenster und pausieren beim Minimieren und im Ruhezustand. Es gibt bewusst nur ein Hauptfenster, damit keine zusätzlichen Abrufschleifen entstehen. Live Activities, Hintergrundaufgaben und Widgets gibt es auf dem Mac nicht. Plattformspezifischer Code ist mit `#if os(iOS)` bzw. `#if os(macOS)` getrennt; Mac-Dateien liegen in `Sources/SkyNearMac/`.
+
+Mac-Konfiguration: `Mac-Info.plist`, `Entitlements/SkyNear-macOS.entitlements` (App Sandbox, ausgehendes Netzwerk, Standort) und Hardened Runtime. Ohne Team wird lokal ad hoc signiert. Für die Weitergabe in *Signing & Capabilities* ein Team wählen. Für iOS muss ebenfalls ein Team gesetzt sein; die App Group `group.de.leola.skynear` ist in `Entitlements/SkyNear-iOS.entitlements` und `Entitlements/SkyNearWidgets-iOS.entitlements` eingetragen.
+
+```bash
+# Universal-Release der Mac-App (arm64 + x86_64)
+xcodebuild -project SkyNear.xcodeproj -scheme "SkyNear macOS" -configuration Release -destination "generic/platform=macOS" build
+# Tests auf dem Mac
+xcodebuild -project SkyNear.xcodeproj -scheme "SkyNear macOS" -destination "platform=macOS" test
+```
+
+Für iOS-Builds in Xcode muss die iOS-Plattform installiert sein (Xcode > Settings > Components); der Asset-Katalog lässt sich sonst nicht kompilieren.
+
 ## Build
 
 Projektordner unter Windows:

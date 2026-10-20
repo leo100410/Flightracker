@@ -1,5 +1,7 @@
 # SkyNear: Projektbeschreibung und Übergabe für einen macOS-Port
 
+> **Umgesetzt am 17.10.2026:** Native SwiftUI-Mac-App (macOS 14+, Universal) im Xcode-Projekt `SkyNear.xcodeproj`, Target `SkyNear macOS`. Widgets und Menüleiste auf dem Mac sind weiterhin offen. Überblick in der README unter „Xcode-Projekt und macOS-App“.
+
 Stand: 15.10.2026. Diese Datei beschreibt den lokal gelesenen Quellcode, keine bereits vorhandene macOS-App. Bei Abweichungen ist der aktuelle Code maßgeblich; ältere Statusangaben in README und Reparaturdokumenten können überholt sein.
 
 Repository: https://github.com/leo100410/Flightracker

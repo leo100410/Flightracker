@@ -33,12 +33,14 @@ private final class RadarResourceMarker: NSObject {}
 enum RadarResources {
     static func url(forResource name: String, withExtension ext: String) -> URL? {
         // Do not call the generated Bundle.module: its missing-bundle path uses fatalError.
-        let candidates = [Bundle.main.resourceURL, Bundle(for: RadarResourceMarker.self).resourceURL]
+        let owner = Bundle(for: RadarResourceMarker.self)
+        let candidates = [Bundle.main.resourceURL, owner.resourceURL]
         for root in candidates.compactMap({ $0 }) {
             if let bundle = Bundle(url: root.appendingPathComponent("SkyNear_RadarCore.bundle")),
                let url = bundle.url(forResource: name, withExtension: ext) { return url }
         }
-        return nil
+        // Xcode builds RadarCore as a framework that carries its resources directly.
+        return owner.url(forResource: name, withExtension: ext)
     }
 }
 

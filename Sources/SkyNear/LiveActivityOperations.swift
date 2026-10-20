@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import ActivityKit
 import RadarCore
@@ -66,3 +67,4 @@ private actor LiveActivityQueue {
         return true
     }
 }
+#endif

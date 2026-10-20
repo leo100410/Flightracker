@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>SkyNear</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>7</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.travel</string>
+	<key>NSLocationUsageDescription</key>
+	<string>SkyNear benötigt deinen Standort, um Flugzeuge in deiner Nähe anzuzeigen. Für die Umkreissuche werden gerundete Koordinaten an ADSB.lol oder bei Ausfall an adsb.fi gesendet. Karten werden von Apple geladen.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SkyNear benötigt deinen Standort, um Flugzeuge in deiner Nähe anzuzeigen. Für die Umkreissuche werden gerundete Koordinaten an ADSB.lol oder bei Ausfall an adsb.fi gesendet. Karten werden von Apple geladen.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>de.leola.skynear.links</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>skynear</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

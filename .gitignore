@@ -1,10 +1,14 @@
 .build/
 .swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
 xtool/
 *.ipa
 *.log
 .skynear-build-lock/
 .bsp/
+.sourcekit-lsp/
 logfiles/
 patch-backups/
 SkyNear_*_Fix/

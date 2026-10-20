@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import BackgroundTasks
 import UIKit
@@ -165,3 +166,4 @@ enum BackgroundRefresh {
         WidgetCenter.shared.reloadAllTimelines()
     }
 }
+#endif

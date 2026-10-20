@@ -1,0 +1,1048 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151F66F73A569A4B04C4853E = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+		};
+		37B4A5CCEF13AC3F1E637155 = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+		};
+		4E688C93C337BE7C638979B9 = {
+			isa = PBXBuildFile;
+			fileRef = B0D27401D2B8F73D9A413A77;
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+		506ED068A3D3B2C6BA78C295 = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+			settings = {
+				ATTRIBUTES = (
+					CodeSignOnCopy,
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+		5B52AC4D609E932B0D985310 = {
+			isa = PBXBuildFile;
+			fileRef = 1E221B85AE5BFAE9FF860D47;
+		};
+		63A0DFA0F072418B79E7D32C = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+		};
+		7B46FFA26B37D493B1BBFB2E = {
+			isa = PBXBuildFile;
+			fileRef = E1D3A5A8899001A4EB9F099B;
+		};
+		B2A04CFC0EDB6F132601DEB5 = {
+			isa = PBXBuildFile;
+			fileRef = 1E221B85AE5BFAE9FF860D47;
+		};
+		BA70EE8DF1655158C532A198 = {
+			isa = PBXBuildFile;
+			fileRef = E1D3A5A8899001A4EB9F099B;
+		};
+		D4AED826ABCC2165FA446E88 = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+		};
+		FAAB502D67401E4A86DF781F = {
+			isa = PBXBuildFile;
+			fileRef = 81B91FBAF10539A1939605E5;
+			settings = {
+				ATTRIBUTES = (
+					CodeSignOnCopy,
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		488DE1504C0480D02E9B6EE7 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = B92629FB6A57238C31EDAF26;
+			remoteInfo = RadarCore;
+		};
+		A3A93871A75640132337E8FF = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = B92629FB6A57238C31EDAF26;
+			remoteInfo = RadarCore;
+		};
+		AA0ACB7CE5398C5C694773F7 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = B92629FB6A57238C31EDAF26;
+			remoteInfo = RadarCore;
+		};
+		BED1C2138FE7079B3D9A524A = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = B92629FB6A57238C31EDAF26;
+			remoteInfo = RadarCore;
+		};
+		F819A168F6010B1B7CA58249 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = 57525733F50649C97FBA5198;
+			remoteInfo = SkyNearWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D2D6C7A2E111091F2EEE30B = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E688C93C337BE7C638979B9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			name = "Embed Foundation Extensions";
+		};
+		5783A22E2A87C43D6D82268F = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506ED068A3D3B2C6BA78C295,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			name = "Embed Frameworks";
+		};
+		8673C0C6842A67D862F7E09A = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAB502D67401E4A86DF781F,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			name = "Embed Frameworks";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D8FB104DC524FDDAC5D3863 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "SkyNear-macOS.entitlements";
+			sourceTree = "<group>";
+		};
+		1E221B85AE5BFAE9FF860D47 = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		1FDB7F251F0944741C8FB946 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "SkyNearWidgets-iOS.entitlements";
+			sourceTree = "<group>";
+		};
+		40FEC3868A8D183CFCC32A46 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Mac-Info.plist";
+			sourceTree = "<group>";
+		};
+		6B005152B1D2C17C299AD7E1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Package.swift;
+			sourceTree = "<group>";
+		};
+		6DA549D0A022750CD2A461F7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "App-Info.plist";
+			sourceTree = "<group>";
+		};
+		7D03FA976809EED46137771A = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = SkyNear.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81B91FBAF10539A1939605E5 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			path = RadarCore.framework;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8801DE3B49C97D34FE9D5E59 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = RadarCoreTests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B0D27401D2B8F73D9A413A77 = {
+			isa = PBXFileReference;
+			explicitFileType = "wrapper.app-extension";
+			includeInIndex = 0;
+			path = SkyNearWidgets.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C4525BF4C76F1F335961F7EC = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.entitlements;
+			path = "SkyNear-iOS.entitlements";
+			sourceTree = "<group>";
+		};
+		C6EB49123ACE393EC0D568AB = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = SkyNear.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1D3A5A8899001A4EB9F099B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = PrivacyInfo.xcprivacy;
+			sourceTree = "<group>";
+		};
+		E7F7B7CB772CEF8886CDBCB4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = "Widget-Info.plist";
+			sourceTree = "<group>";
+		};
+		FE2BF84DA75A89938A666958 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.yaml;
+			path = xtool.yml;
+			sourceTree = "<group>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		091985CFE60A40244516D38B = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SkyNearMac;
+			sourceTree = "<group>";
+		};
+		6A3DFCE7B700C4113EA18634 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SkyNear;
+			sourceTree = "<group>";
+		};
+		C7E23360C170420CE095CFB7 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RadarCore;
+			sourceTree = "<group>";
+		};
+		D6A389BCEE209D4F7F527026 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RadarCoreTests;
+			sourceTree = "<group>";
+		};
+		F77C874D59FAD55AB51E2097 = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SkyNearWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C2A6C296829F935E9044EED = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4AED826ABCC2165FA446E88,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F6F064D97D9899A69A0DE64 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151F66F73A569A4B04C4853E,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C18CFF1AF8A166542452FD2 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D6C432F36C4F714F6EDE00D = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B4A5CCEF13AC3F1E637155,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F782B2DDE46A3336ED34D3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A0DFA0F072418B79E7D32C,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49108901BA9D37D35762520D = {
+			isa = PBXGroup;
+			children = (
+				81B91FBAF10539A1939605E5,
+				C6EB49123ACE393EC0D568AB,
+				B0D27401D2B8F73D9A413A77,
+				7D03FA976809EED46137771A,
+				8801DE3B49C97D34FE9D5E59,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B7F299AE647B1CE1D495ABB = {
+			isa = PBXGroup;
+			children = (
+				6DA549D0A022750CD2A461F7,
+				E7F7B7CB772CEF8886CDBCB4,
+				40FEC3868A8D183CFCC32A46,
+				9D0B2F10983CE22602F9774D,
+				6B005152B1D2C17C299AD7E1,
+				FE2BF84DA75A89938A666958,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		5244435607A3CE9487AC8E7A = {
+			isa = PBXGroup;
+			children = (
+				D6A389BCEE209D4F7F527026,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9471FCDFD2CAB1D034660E8A = {
+			isa = PBXGroup;
+			children = (
+				C7E23360C170420CE095CFB7,
+				6A3DFCE7B700C4113EA18634,
+				091985CFE60A40244516D38B,
+				F77C874D59FAD55AB51E2097,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9D0B2F10983CE22602F9774D = {
+			isa = PBXGroup;
+			children = (
+				C4525BF4C76F1F335961F7EC,
+				1FDB7F251F0944741C8FB946,
+				0D8FB104DC524FDDAC5D3863,
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		CD842F8ACDA6DB0F9356BED2 = {
+			isa = PBXGroup;
+			children = (
+				9471FCDFD2CAB1D034660E8A,
+				5244435607A3CE9487AC8E7A,
+				E500A5EEC2F4E5738763826D,
+				4B7F299AE647B1CE1D495ABB,
+				49108901BA9D37D35762520D,
+			);
+			sourceTree = "<group>";
+		};
+		E500A5EEC2F4E5738763826D = {
+			isa = PBXGroup;
+			children = (
+				1E221B85AE5BFAE9FF860D47,
+				E1D3A5A8899001A4EB9F099B,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CFE6920ECD573BE3BA5DFA9 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8920E7243AFA43AD3E6FFB8C;
+			buildPhases = (
+				474D4C1ECBD66CA95A8A55DC,
+				0F6F064D97D9899A69A0DE64,
+				4A198909A5B78AE04A736420,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C82376857F8F45232F5ECC7,
+			);
+			fileSystemSynchronizedGroups = (
+				D6A389BCEE209D4F7F527026,
+			);
+			name = RadarCoreTests;
+			packageProductDependencies = (
+			);
+			productName = RadarCoreTests;
+			productReference = 8801DE3B49C97D34FE9D5E59;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30FD9C600032B793B40BEE96 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7624035A60E65E6446169455;
+			buildPhases = (
+				BD4D4ECB973D014CC888DFBA,
+				A7F782B2DDE46A3336ED34D3,
+				8483EF472456B92B04882762,
+				8673C0C6842A67D862F7E09A,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50D664FEBEF49AB691F0A061,
+			);
+			fileSystemSynchronizedGroups = (
+				6A3DFCE7B700C4113EA18634,
+				091985CFE60A40244516D38B,
+			);
+			name = "SkyNear macOS";
+			packageProductDependencies = (
+			);
+			productName = "SkyNear macOS";
+			productReference = 7D03FA976809EED46137771A;
+			productType = "com.apple.product-type.application";
+		};
+		57525733F50649C97FBA5198 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ADE31F166D92D65C0C6F75B;
+			buildPhases = (
+				BD8CF3BDD652B51D4852A6D3,
+				3D6C432F36C4F714F6EDE00D,
+				FECE34154EFADE02BCA54DAE,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1C4E280504F36E182E56B5,
+			);
+			fileSystemSynchronizedGroups = (
+				F77C874D59FAD55AB51E2097,
+			);
+			name = SkyNearWidgets;
+			packageProductDependencies = (
+			);
+			productName = SkyNearWidgets;
+			productReference = B0D27401D2B8F73D9A413A77;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B92629FB6A57238C31EDAF26 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDF5BA7C50DDAA82C43AF2A;
+			buildPhases = (
+				298E9F72370614D2970B007C,
+				1C18CFF1AF8A166542452FD2,
+				196ED3E055A55DED95A5CE73,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C7E23360C170420CE095CFB7,
+			);
+			name = RadarCore;
+			packageProductDependencies = (
+			);
+			productName = RadarCore;
+			productReference = 81B91FBAF10539A1939605E5;
+			productType = "com.apple.product-type.framework";
+		};
+		BD3173F8EBD580C625A18565 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66CE27A65BA7588D6E9DFAE;
+			buildPhases = (
+				2E3235314F6ED5CE41C12FE8,
+				0C2A6C296829F935E9044EED,
+				3903081E0EB502CAD86E3941,
+				5783A22E2A87C43D6D82268F,
+				0D2D6C7A2E111091F2EEE30B,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AB6C805428C479BA12AF82D,
+				24EC731C715F3C5A48A39A42,
+			);
+			fileSystemSynchronizedGroups = (
+				6A3DFCE7B700C4113EA18634,
+			);
+			name = SkyNear;
+			packageProductDependencies = (
+			);
+			productName = SkyNear;
+			productReference = C6EB49123ACE393EC0D568AB;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B92629FB6A57238C31EDAF26 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					57525733F50649C97FBA5198 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					BD3173F8EBD580C625A18565 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					30FD9C600032B793B40BEE96 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					2CFE6920ECD573BE3BA5DFA9 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = CE36D6306C17890370B358E3;
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				de,
+				en,
+				da,
+				Base,
+			);
+			mainGroup = CD842F8ACDA6DB0F9356BED2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 49108901BA9D37D35762520D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD3173F8EBD580C625A18565,
+				57525733F50649C97FBA5198,
+				30FD9C600032B793B40BEE96,
+				B92629FB6A57238C31EDAF26,
+				2CFE6920ECD573BE3BA5DFA9,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		196ED3E055A55DED95A5CE73 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3903081E0EB502CAD86E3941 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B52AC4D609E932B0D985310,
+				7B46FFA26B37D493B1BBFB2E,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A198909A5B78AE04A736420 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8483EF472456B92B04882762 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A04CFC0EDB6F132601DEB5,
+				BA70EE8DF1655158C532A198,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECE34154EFADE02BCA54DAE = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		298E9F72370614D2970B007C = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3235314F6ED5CE41C12FE8 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		474D4C1ECBD66CA95A8A55DC = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4D4ECB973D014CC888DFBA = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD8CF3BDD652B51D4852A6D3 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24EC731C715F3C5A48A39A42 = {
+			isa = PBXTargetDependency;
+			target = 57525733F50649C97FBA5198;
+			targetProxy = F819A168F6010B1B7CA58249;
+		};
+		50D664FEBEF49AB691F0A061 = {
+			isa = PBXTargetDependency;
+			target = B92629FB6A57238C31EDAF26;
+			targetProxy = A3A93871A75640132337E8FF;
+		};
+		8AB6C805428C479BA12AF82D = {
+			isa = PBXTargetDependency;
+			target = B92629FB6A57238C31EDAF26;
+			targetProxy = AA0ACB7CE5398C5C694773F7;
+		};
+		9C82376857F8F45232F5ECC7 = {
+			isa = PBXTargetDependency;
+			target = B92629FB6A57238C31EDAF26;
+			targetProxy = 488DE1504C0480D02E9B6EE7;
+		};
+		CD1C4E280504F36E182E56B5 = {
+			isa = PBXTargetDependency;
+			target = B92629FB6A57238C31EDAF26;
+			targetProxy = BED1C2138FE7079B3D9A524A;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02AAF0C758F2027587C68C33 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNear-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mac-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear;
+				PRODUCT_NAME = SkyNear;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		04B349E5845D8F10D04E99E3 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNear-macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mac-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear;
+				PRODUCT_NAME = SkyNear;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		06DFB1829FF7266211CAA9B0 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNearWidgets-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.SkyNearWidgets;
+				PRODUCT_NAME = SkyNearWidgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0868FB48DE6BB567198BEAD5 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.RadarCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		39449EDF7B151AF1BDA56BF2 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
+				SWIFT_VERSION = 6.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		453FF012BC101FA2B9706FEF = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
+				SWIFT_VERSION = 6.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		556113020295CA600467003D = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.RadarCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A19589BADB49C4E4F986E76 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNear-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear;
+				PRODUCT_NAME = SkyNear;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B43172CE8566D30E3C295CA9 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.RadarCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C01AB7AE435CC9BA19C6C616 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNear-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "App-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear;
+				PRODUCT_NAME = SkyNear;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C8D8812CF522ADDC23333C1B = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.RadarCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD1C361697CF0A1D3E990913 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Entitlements/SkyNearWidgets-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Widget-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.leola.skynear.SkyNearWidgets;
+				PRODUCT_NAME = SkyNearWidgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4ADE31F166D92D65C0C6F75B = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1C361697CF0A1D3E990913,
+				06DFB1829FF7266211CAA9B0,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7624035A60E65E6446169455 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02AAF0C758F2027587C68C33,
+				04B349E5845D8F10D04E99E3,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8920E7243AFA43AD3E6FFB8C = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D8812CF522ADDC23333C1B,
+				0868FB48DE6BB567198BEAD5,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDF5BA7C50DDAA82C43AF2A = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				556113020295CA600467003D,
+				B43172CE8566D30E3C295CA9,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66CE27A65BA7588D6E9DFAE = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01AB7AE435CC9BA19C6C616,
+				5A19589BADB49C4E4F986E76,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE36D6306C17890370B358E3 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39449EDF7B151AF1BDA56BF2,
+				453FF012BC101FA2B9706FEF,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595;
+}

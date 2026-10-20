@@ -472,5 +472,17 @@
   "Entfernt sich": {
     "en": "Moving away",
     "da": "Bevæger sig væk"
+  },
+  "Standort verweigert. Unter Systemeinstellungen > Datenschutz & Sicherheit > Ortungsdienste freigeben.": {
+    "en": "Location denied. Enable it in System Settings > Privacy & Security > Location Services.",
+    "da": "Lokalitet afvist. Aktivér den i Systemindstillinger > Anonymitet og sikkerhed > Lokalitetstjenester."
+  },
+  "Ortungsdienste in den Systemeinstellungen öffnen": {
+    "en": "Open Location Services in System Settings",
+    "da": "Åbn Lokalitetstjenester i Systemindstillinger"
+  },
+  "App: 20 Sekunden gewünschtes Abrufintervall bei geöffnetem Fenster. Netzwerkzeit kommt hinzu. Im Ruhezustand des Mac ruht der Abruf.": {
+    "en": "Open window: roughly 20 seconds between requests, with longer waits on errors. Requests pause while the Mac sleeps or the window is closed.",
+    "da": "Åbent vindue: cirka 20 sekunder mellem forespørgsler, længere ved fejl. Forespørgsler holder pause, når Mac'en sover, eller vinduet er lukket."
   }
 }

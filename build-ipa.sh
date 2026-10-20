@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
+# On macOS xtool needs Xcode's iOS SDK; the Command Line Tools alone make it look for a Linux swift-sdk.
+if [[ "$(uname)" == Darwin && -z "${DEVELOPER_DIR:-}" && "$(xcode-select -p 2>/dev/null)" == /Library/Developer/CommandLineTools* \
+      && -d /Applications/Xcode.app/Contents/Developer ]]; then
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+fi
 if ! mkdir .skynear-build-lock 2>/dev/null; then
     echo 'Es läuft bereits ein Build oder die Build-Sperre eines abgebrochenen Builds existiert.' >&2
     echo 'Keinen zweiten Build starten. Erst prüfen, ob der vorherige Prozess beendet ist.' >&2

@@ -19,7 +19,12 @@ public final class AppLocation: NSObject, ObservableObject, @preconcurrency CLLo
         switch manager.authorizationStatus {
         case .notDetermined: manager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse: manager.startUpdatingLocation()
-        case .denied, .restricted: message = "Standort verweigert. Unter Einstellungen > SkyNear freigeben."
+        case .denied, .restricted:
+            #if os(macOS)
+            message = "Standort verweigert. Unter Systemeinstellungen > Datenschutz & Sicherheit > Ortungsdienste freigeben."
+            #else
+            message = "Standort verweigert. Unter Einstellungen > SkyNear freigeben."
+            #endif
         @unknown default: message = "Standortberechtigung nicht verfügbar."
         }
     }
@@ -55,6 +60,13 @@ public final class WidgetLocationRequest: NSObject, @preconcurrency CLLocationMa
             throw RadarError.location("App öffnen, Standort freigeben und die Standortnutzung des Widgets erlauben.")
         }
         manager.desiredAccuracy = kCLLocationAccuracyKilometer
+        // A recent system fix avoids a cold location request on every reload, which often outlasts the timeout.
+        if let location = manager.location, location.horizontalAccuracy >= 0,
+           abs(location.timestamp.timeIntervalSinceNow) < 300 {
+            let point = GeoPoint(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            LocationMemory.save(SavedLocation(point: point, measuredAt: location.timestamp))
+            return point
+        }
         return try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { continuation in
                 if Task.isCancelled {

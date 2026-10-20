@@ -1,8 +1,11 @@
 import SwiftUI
+#if os(iOS)
 import UIKit
 import BackgroundTasks
+#endif
 import RadarCore
 
+#if os(iOS)
 @MainActor
 enum AppDiagnostics {
     static var refreshStatus: String {
@@ -19,6 +22,15 @@ enum AppDiagnostics {
         RadarDiagnostics.record("app environment reason=\(reason) backgroundRefresh=\(refreshStatus) lowPower=\(ProcessInfo.processInfo.isLowPowerModeEnabled) thermal=\(ProcessInfo.processInfo.thermalState.rawValue) state=\(UIApplication.shared.applicationState.rawValue)")
     }
 }
+#else
+@MainActor
+enum AppDiagnostics {
+    // The Mac app has no scheduled background task, widget extension, or shared app group.
+    static func capture(_ reason: String) {
+        RadarDiagnostics.record("app environment reason=\(reason) platform=macOS lowPower=\(ProcessInfo.processInfo.isLowPowerModeEnabled) thermal=\(ProcessInfo.processInfo.thermalState.rawValue)")
+    }
+}
+#endif
 
 struct DiagnosticsView: View {
     @Environment(\.dismiss) private var dismiss
@@ -33,6 +45,7 @@ struct DiagnosticsView: View {
 
     var body: some View {
         List {
+            #if os(iOS)
             Section("Aktualisierung · Build \(RadarDiagnostics.build)") {
                 LabeledContent("Hintergrundaktualisierung", value: AppDiagnostics.refreshStatus)
                 LabeledContent("Stromsparmodus", value: ProcessInfo.processInfo.isLowPowerModeEnabled ? "Ein" : "Aus")
@@ -59,6 +72,13 @@ struct DiagnosticsView: View {
                     LabeledContent("Übernommener Widget-Stand", value: localTime(Date(timeIntervalSince1970: time)))
                 } else { Text("Noch kein Widget-Protokoll übernommen").foregroundStyle(.orange) }
             }
+            #else
+            Section("Aktualisierung · Build \(RadarDiagnostics.build)") {
+                LabeledContent("Stromsparmodus", value: ProcessInfo.processInfo.isLowPowerModeEnabled ? "Ein" : "Aus")
+                Text("Der Mac ruft nur bei geöffnetem Fenster ab. Es gibt keine Hintergrundaufgabe und keine Widgets.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
+            #endif
             Section("Logdatei") {
                 Button("Logdatei erstellen / aktualisieren") { Task { await prepareExport() } }
                     .disabled(busy)
@@ -78,7 +98,9 @@ struct DiagnosticsView: View {
             }
         }
         .navigationTitle("Aktualisierungsdiagnose")
+        #if os(iOS)
         .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Fertig") { dismiss() } } }
+        #endif
         .task { await reload() }
         .onChange(of: phase) { _, value in if value == .active { Task { await reload() } } }
         .refreshable { await reload() }
@@ -86,11 +108,13 @@ struct DiagnosticsView: View {
     private func localTime(_ date: Date) -> String { date.formatted(date: .abbreviated, time: .standard) }
     private func reload() async {
         AppDiagnostics.capture("diagnostics screen")
+        #if os(iOS)
         sharedStatus = SharedWidgetStorage.inspect(process: "app")
         let requests = await BGTaskScheduler.shared.pendingTaskRequests()
         let request = requests.first { $0.identifier == BackgroundRefresh.identifier }
         pending = request.map { $0.earliestBeginDate.map(localTime) ?? "Ohne frühesten Termin" } ?? "Keine"
         RadarDiagnostics.record("background inspection pending=\(request != nil) earliest=\(RadarDiagnostics.stamp(request?.earliestBeginDate))")
+        #endif
         do { records = try await Task.detached { try RadarDiagnostics.events() }.value }
         catch { self.error = RadarDiagnostics.errorCode(error) }
     }
